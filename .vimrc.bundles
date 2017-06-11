@@ -174,7 +174,6 @@
             Bundle 'ryanoasis/nerd-fonts'
             Bundle 'airblade/vim-gitgutter'
             "Bundle 'FortAwesome/Font-Awesome'
-            Bundle 'mhinz/vim-startify'
             Bundle 'osyo-manga/vim-over'
 
             if executable('ctags')

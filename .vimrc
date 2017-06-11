@@ -577,16 +577,15 @@
         if isdirectory(expand("~/.vim/bundle/nerdtree"))
             map <C-e> <plug>NERDTreeTabsToggle<CR>
             map <leader>e :NERDTreeFind<CR>
-            nmap <leader>nt :NERDTreeFind<CR>
+            "nmap <leader>nt :NERDTreeFind<CR>
 
             let NERDTreeShowBookmarks=1
             let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
-            let NERDTreeChDirMode=0
+            let NERDTreeChDirMode=1
             let NERDTreeQuitOnOpen=1
             let NERDTreeMouseMode=2
-            let NERDTreeShowHidden=1
             let NERDTreeKeepTreeInNewTab=1
-            let g:nerdtree_tabs_open_on_gui_startup=0
+            let g:nerdtree_tabs_open_on_gui_startup=1
         endif
     " }
 
@@ -632,7 +631,7 @@
         endif
 
         if isdirectory(expand("~/.vim/bundle/python-mode"))
-            let g:pymode_lint_checkers = ['pyflakes']
+            let g:pymode_lint_checkers = ['pep8']
             let g:pymode_trim_whitespaces = 0
             let g:pymode_options = 0
             let g:pymode_rope = 0
@@ -1143,7 +1142,8 @@
         redir END
         let idx = stridx(bufoutput, "NERD_tree")
         if idx > -1
-            NERDTreeMirror
+            NERDTreeKeepTreeInNewTab=1
+            NERDTreeMirrorOpen=1
             NERDTreeFind
             wincmd l
         endif
