@@ -12,7 +12,7 @@
 "   While much of it is beneficial for general use, I would
 "   recommend picking out the parts you want and understand.
 "
-"   This file imports the various plugins of spf13. If you
+"   This file imports the various Bundleins of spf13. If you
 "   wish to alter which groups are imported, see vimrc.before.
 "   If you wish to add or remove individual bundles, create
 "   ~/.vimrc.bundles.local and `Bundle` or `UnBundle` as needed
@@ -89,7 +89,7 @@
     " }
 
     " In your .vimrc.before.local file
-    " list only the plugin groups you will use
+    " list only the Bundlein groups you will use
     if !exists('g:spf13_bundle_groups')
         let g:spf13_bundle_groups=['general', 'writing', 'neocomplete', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc',]
     endif
@@ -113,6 +113,18 @@
             Bundle 'terryma/vim-multiple-cursors'
             Bundle 'vim-scripts/sessionman.vim'
             Bundle 'matchit.zip'
+
+            Bundle 'junegunn/vim-easy-align'
+            Bundle 'https://github.com/junegunn/vim-github-dashboard.git'
+            Bundle 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+            Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+            " --- man pages, tmux
+            " ---------------------------------------------
+            Bundle 'jez/vim-superman'
+            Bundle 'christoomey/vim-tmux-navigator'
+
+
             if (has("python") || has("python3")) && exists('g:spf13_use_powerline') && !exists('g:spf13_use_old_powerline')
                 Bundle 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
             elseif exists('g:spf13_use_powerline') && exists('g:spf13_use_old_powerline')
@@ -133,7 +145,6 @@
             endif
             Bundle 'mhinz/vim-signify'
             Bundle 'tpope/vim-abolish.git'
-            Bundle 'osyo-manga/vim-over'
             Bundle 'kana/vim-textobj-user'
             Bundle 'kana/vim-textobj-indent'
             Bundle 'gcmt/wildfire.vim'
@@ -160,6 +171,13 @@
             Bundle 'tpope/vim-commentary'
             Bundle 'godlygeek/tabular'
             Bundle 'luochen1990/rainbow'
+            Bundle 'Yggdroot/indentLine'
+            Bundle 'ryanoasis/nerd-fonts'
+            Bundle 'airblade/vim-gitgutter'
+            "Bundle 'FortAwesome/Font-Awesome'
+            Bundle 'mhinz/vim-startify'
+            Bundle 'osyo-manga/vim-over'
+
             if executable('ctags')
                 Bundle 'majutsushi/tagbar'
             endif
@@ -196,6 +214,8 @@
             Bundle 'spf13/PIV'
             Bundle 'arnaud-lb/vim-php-namespace'
             Bundle 'beyondwords/vim-twig'
+            Bundle 'dsawardekar/wordpress.vim'
+            Bundle 'tyru/open-browser.vim'
         endif
     " }
 
@@ -206,6 +226,13 @@
             Bundle 'yssource/python.vim'
             Bundle 'python_match.vim'
             Bundle 'pythoncomplete'
+            Bundle 'davidhalter/jedi-vim'
+            Bundle 'Glench/Vim-Jinja2-Syntax'
+            Bundle 'vim-scripts/Python-Documentation'
+            Bundle 'tell-k/vim-autopep8'
+            Bundle 'ryanoasis/vim-devicons'
+            Bundle 'xuyuanp/nerdtree-git-Bundlein'
+            Bundle 'andviro/flake8-vim'
         endif
     " }
 
@@ -308,4 +335,4 @@
     if filereadable(expand("~/.vimrc.bundles.local"))
         source ~/.vimrc.bundles.local
     endif
-" }
+"

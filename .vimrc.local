@@ -1,0 +1,59 @@
+" Setting up the directories {
+    set backup                  " Backups are nice ...
+    if has('persistent_undo')
+      set undofile                " So is persistent undo ...
+      set undolevels=1000         " Maximum number of changes that can be undone
+      set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
+    endif
+
+    set backupdir=~/.vim/tmp/backup//
+    set directory=~/.vim/tmp/swap//
+    set undodir=~/.vim/tmp/undo//
+
+    highlight clear SignColumn      " SignColumn should match background
+    highlight clear LineNr          " Current line number row will have same background color in relative mode
+    highlight clear CursorLineNr    " Remove highlight color from current line number
+    set listchars=tab:›\ ,trail:•,extends:├,nbsp:. " Highlight problematic whitespace
+
+"}
+
+" Formatting {
+    set relativenumber
+    set wrap                        " Do not wrap long lines
+    set autoindent                  " Indent at the same level of the previous line
+    set shiftwidth=2                " Use indents of 4 spaces
+    set expandtab                   " Tabs are spaces, not tabs
+    set tabstop=2                   " An indentation every four columns
+    set softtabstop=2               " Let backspace delete indent
+    set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
+    set splitright                  " Puts new vsplit windows to the right of the current
+    set splitbelow                  " Puts new split windows to the bottom of the current
+    set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
+    "" Workaround broken colour highlighting in Haskell
+    "autocmd FileType haskell,rust setlocal nospell
+" }
+
+"================================================
+"               CursorLineNr
+"================================================
+"set t_cs=256
+if &term == 'xterm-256color' || &term == 'screen-256color'
+    let &t_SI = "\<Esc>[6 q"
+    let &t_SR = "\<Esc>[2 q"
+    let &t_EI = "\<Esc>[3 q"
+else
+    let &t_SR = "\<Esc>]50;CursorShape=0\x7"
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    let &t_EI = "\<Esc>]50;CursorShape=2\x7"
+endif
+
+
+if exists('$TMUX')
+    "let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+    "let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+    "let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+
+    let &t_SI = "\<Esc>[6 q"
+    let &t_SR = "\<Esc>[2 q"
+    let &t_EI = "\<Esc>[3 q"
+endif
