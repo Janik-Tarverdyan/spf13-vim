@@ -122,7 +122,7 @@
             " --- man pages, tmux
             " ---------------------------------------------
             "Bundle 'jez/vim-superman'
-            Bundle 'christoomey/vim-tmux-navigator'
+            "Bundle 'christoomey/vim-tmux-navigator'
 
 
             if (has("python") || has("python3")) && exists('g:spf13_use_powerline') && !exists('g:spf13_use_old_powerline')
