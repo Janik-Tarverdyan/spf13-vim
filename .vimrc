@@ -4,4 +4,4 @@ source ~/.spf13-vim-3/.vimrc_plugins.conf
 source ~/.spf13-vim-3/.vimrc.local
 
 set cc=0
-set background=light
+"set background=light
