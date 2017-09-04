@@ -231,7 +231,7 @@
             Bundle 'tell-k/vim-autopep8'
             Bundle 'ryanoasis/vim-devicons'
             Bundle 'Xuyuanp/nerdtree-git-plugin'
-            Bundle 'andviro/flake8-vim'
+            "Bundle 'andviro/flake8-vim'
         endif
     " }
 
