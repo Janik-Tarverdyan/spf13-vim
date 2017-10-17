@@ -113,7 +113,7 @@
             Bundle 'terryma/vim-multiple-cursors'
             Bundle 'vim-scripts/sessionman.vim'
             Bundle 'matchit.zip'
-            Bundle 'jaxbot/github-issues.vim'
+            "Bundle 'jaxbot/github-issues.vim'
 
             Bundle 'junegunn/vim-easy-align'
             Bundle 'https://github.com/junegunn/vim-github-dashboard.git'
@@ -215,6 +215,12 @@
             Bundle 'beyondwords/vim-twig'
             Bundle 'dsawardekar/wordpress.vim'
             Bundle 'tyru/open-browser.vim'
+
+            Bundle 'tpope/vim-dispatch'
+            Bundle 'tpope/vim-projectionist'
+            Bundle 'noahfrederick/vim-composer'
+            Bundle 'rafaelndev/deoplete-laravel-plugin', {'for': ['php'], 'do': 'composer install'}
+            Bundle 'noahfrederick/vim-laravel'
         endif
     " }
 
