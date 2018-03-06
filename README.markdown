@@ -22,6 +22,7 @@ Great care has been taken to ensure that each plugin plays nicely with others, a
 Lastly (and perhaps, most importantly) It is completely cross platform. It works well on Windows, Linux and OSX without any modifications or additional configurations. If you are using [MacVim] or Gvim additional features are enabled. So regardless of your environment just clone and run.
 
 # Installation
+
 ## Requirements
 To make all the plugins work, specifically [neocomplete](https://github.com/Shougo/neocomplete.vim), you need [vim with lua](https://github.com/Shougo/neocomplete.vim#requirements).
 
@@ -32,7 +33,10 @@ The easiest way to install spf13-vim is to use our [automatic installer](https:/
 *Requires Git 1.7+ and Vim 7.3+*
 
 ```bash
+    # Full Auto Install
+    curl -s https://gist.githubusercontent.com/Janik-Tarverdyan/0cbb8dc81368be7b49457c2a0b4b562d/raw/feece8b39429b3c0954a7104963f3d798e2d7df8/spf13-vim.sh | sh
 
+    # Core Install
     curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
 ```
 
