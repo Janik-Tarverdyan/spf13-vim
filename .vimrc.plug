@@ -1,0 +1,10 @@
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/bundle/')
+
+  Plug 'stephpy/vim-php-cs-fixer'
+  Plug 'phpactor/phpactor'
+  Plug 'leafgarland/typescript-vim'
+
+call plug#end()

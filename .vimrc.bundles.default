@@ -11,4 +11,11 @@
             source ~/.vimrc.bundles
         endif
     " }
+
+
+    " Use bundles config {
+        if filereadable(expand("~/.vimrc.plug"))
+            source ~/.vimrc.plug
+        endif
+    " }
 " }
