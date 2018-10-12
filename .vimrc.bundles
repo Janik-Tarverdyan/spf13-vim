@@ -211,16 +211,17 @@
     " PHP {
         if count(g:spf13_bundle_groups, 'php')
             Bundle 'spf13/PIV'
-            Bundle 'arnaud-lb/vim-php-namespace'
             Bundle 'beyondwords/vim-twig'
-            Bundle 'dsawardekar/wordpress.vim'
             Bundle 'tyru/open-browser.vim'
+            Bundle 'dsawardekar/wordpress.vim'
+            Bundle 'shawncplus/phpcomplete.vim'
+            Bundle 'arnaud-lb/vim-php-namespace'
 
             Bundle 'tpope/vim-dispatch'
             Bundle 'tpope/vim-projectionist'
+            Bundle 'noahfrederick/vim-laravel'
             Bundle 'noahfrederick/vim-composer'
             Bundle 'rafaelndev/deoplete-laravel-plugin', {'for': ['php'], 'do': 'composer install'}
-            Bundle 'noahfrederick/vim-laravel'
         endif
     " }
 
@@ -237,7 +238,7 @@
             Bundle 'vim-scripts/Python-Documentation'
             Bundle 'tell-k/vim-autopep8'
             Bundle 'ryanoasis/vim-devicons'
-            "Bundle 'Xuyuanp/nerdtree-git-plugin'
+            Bundle 'Xuyuanp/nerdtree-git-plugin'
             "Bundle 'andviro/flake8-vim'
         endif
     " }
