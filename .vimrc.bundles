@@ -283,6 +283,7 @@
             Bundle 'gorodinskiy/vim-coloresque'
             Bundle 'tpope/vim-haml'
             Bundle 'mattn/emmet-vim'
+            Bundle "lepture/vim-jinja"
         endif
     " }
 
