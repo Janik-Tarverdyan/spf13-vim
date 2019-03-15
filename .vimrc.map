@@ -95,6 +95,7 @@ map <leader>ew :e %%
 map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%
+map <leader>ve :tabnew ~/.vimrc <CR>
 
 " Adjust viewports to the same size
 map <Leader>= <C-w>=
