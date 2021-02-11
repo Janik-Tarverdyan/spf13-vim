@@ -100,8 +100,8 @@ map <leader>ve :tabnew ~/.vimrc <CR>
 " Adjust viewports to the same size
 map <Leader>= <C-w>=
 
-map <Leader>t :terminal 
-map <leader>bo :OpenBrowser 
+map <Leader>t :terminal
+map <leader>bo :OpenBrowser
 
 " Map <Leader>ff to display all lines with keyword under cursor
 " and ask which one to jump to
@@ -120,8 +120,8 @@ map <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscr
 
 
 nnoremap <silent> <Space> :nohlsearch <CR>
-"nnoremap <C-T> :tabnew 
-map t :tabnew 
+"nnoremap <C-T> :tabnew
+map t :tabnew
 map so :source ~/.vimrc <CR>
 map lr :AirlineRefresh <CR>
 "map <C-Tab> :bnext <CR>
@@ -134,8 +134,10 @@ map lr :AirlineRefresh <CR>
 "inoremap <C-t>     <Esc>:tabnew<CR>
 
 map ,fp :FZF <CR>
+map ,ds :%s/\s\+$// <CR>
 map ff :set ff=
-map ft :setfiletype 
+map ft :setfiletype
+map fe :set fileencoding=
 map fo :foldopen <CR>
 map fc :foldclose <CR>
 "map <C-B> :!php % <Bar> clear <CR>
