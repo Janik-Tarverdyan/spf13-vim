@@ -8,5 +8,5 @@ source ~/.spf13-vim-3/.vimrc.local
 set t_Co=256
 set cc=80
 "set background=light
-autocmd VimEnter * source ~/.vimrc
+"autocmd VimEnter * source ~/.vimrc
 hi Normal ctermbg=none

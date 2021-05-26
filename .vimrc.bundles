@@ -91,7 +91,9 @@
     " In your .vimrc.before.local file
     " list only the Bundlein groups you will use
     if !exists('g:spf13_bundle_groups')
-        let g:spf13_bundle_groups=['general', 'writing', 'neocomplete', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc',]
+        let g:spf13_bundle_groups=['general', 'writing', 'neocomplete',
+                    \ 'programming', 'php', 'ruby', 'python',
+                    \ 'javascript', 'html', 'misc',]
     endif
 
     " To override all the included bundles, add the following to your
@@ -122,8 +124,8 @@
 
             " --- man pages, tmux
             " ---------------------------------------------
-            "Bundle 'jez/vim-superman'
-            "Bundle 'christoomey/vim-tmux-navigator'
+            Bundle 'jez/vim-superman'
+            Bundle 'christoomey/vim-tmux-navigator'
 
 
             if (has("python") || has("python3")) && exists('g:spf13_use_powerline') && !exists('g:spf13_use_old_powerline')
@@ -166,6 +168,7 @@
             Bundle 'scrooloose/syntastic'
             Bundle 'tpope/vim-fugitive'
             Bundle 'mattn/webapi-vim'
+            Bundle 'editorconfig/editorconfig-vim'
             Bundle 'mattn/gist-vim'
             Bundle 'scrooloose/nerdcommenter'
             Bundle 'tpope/vim-commentary'
@@ -174,7 +177,6 @@
             Bundle 'Yggdroot/indentLine'
             Bundle 'ryanoasis/nerd-fonts'
             Bundle 'airblade/vim-gitgutter'
-            "Bundle 'FortAwesome/Font-Awesome'
             Bundle 'osyo-manga/vim-over'
 
             if executable('ctags')
@@ -196,7 +198,7 @@
             Bundle 'SirVer/ultisnips'
             Bundle 'honza/vim-snippets'
         elseif count(g:spf13_bundle_groups, 'neocomplcache')
-            Bundle 'Shougo/neocomplcache'
+            "Bundle 'Shougo/neocomplcache'
             Bundle 'Shougo/neosnippet'
             Bundle 'Shougo/neosnippet-snippets'
             Bundle 'honza/vim-snippets'
@@ -228,12 +230,12 @@
     " Python {
         if count(g:spf13_bundle_groups, 'python')
             " Pick either python-mode or pyflakes & pydoc
-            "Bundle 'klen/python-mode'
-            Bundle 'python-mode/python-mode'
+            "Bundle 'python-mode/python-mode'
             Bundle 'yssource/python.vim'
             Bundle 'python_match.vim'
             Bundle 'pythoncomplete'
-            Bundle 'davidhalter/jedi-vim'
+            Bundle 'Coacher/vim-virtualenv'
+            "Bundle 'davidhalter/jedi-vim'
             Bundle 'Glench/Vim-Jinja2-Syntax'
             Bundle 'vim-scripts/Python-Documentation'
             Bundle 'tell-k/vim-autopep8'
