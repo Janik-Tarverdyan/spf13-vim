@@ -26,10 +26,10 @@
       set wrapmargin=80
 
       set tw=80
-      set fo+=t
+      "set fo+=t
       set wm=0
       set linebreak
-      noremap :set wrap!
+      "noremap :set wrap!
 
       "Show when I should be wrapping
       set cc=+1
